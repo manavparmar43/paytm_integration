@@ -1,0 +1,66 @@
+{%extends 'shoping.html'%}
+{% block payment %}
+<h1 class="text-center mt-5">Shiping Detail</h1>
+<div class="container mt-5">
+<form class="row g-3 needs-validation" method="POST">
+  {% csrf_token %}
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Order Name</label>
+        <input type="text" class="form-control" value="redmi" name="product_name" readonly >
+       
+    </div>
+    <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Price</label>
+    <input type="text" class="form-control" value="2" name="product_price"  readonly>
+    
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Product Description</label>
+        <input type="text" class="form-control" value="hbhvbfbhvdh" name="product_description"  readonly>
+        
+        </div>
+    <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" name='username'value="admin"  aria-describedby="inputGroupPrepend" readonly>
+         
+        </div>
+      </div>
+    
+    
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input type="text" class="form-control" name="first_name"  >
+ 
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control"  name="last_name" >
+      </div>
+    <div class="col-md-4">
+      <label for="validationCustom03" class="form-label">City</label>
+      <input type="text" class="form-control" name="city" >
+  
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">State</label>
+        <input type="text" class="form-control" name="state">
+    
+      </div>
+    <div class="col-md-4">
+      <label for="validationCustom05" class="form-label">Zip</label>
+      <input type="text" class="form-control" name="zip"  >
+     
+    </div>
+    <div class="col-md-12">
+        <label for="validationCustom03" class="form-label">Full Address</label>
+        <input type="text" class="form-control" name="address" >
+    
+      </div>
+    <div class="col-12 ">
+      <button class="btn btn-primary" type="submit">Submit And Buy</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
